@@ -1,0 +1,7 @@
+{
+  "name": "treadmill-web",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
