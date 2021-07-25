@@ -13,5 +13,22 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Manual page"></app-explore-container>
+  <div class="container">
+    <div class="display">
+      <div class="speed">4.2 mph</div>
+      <div class="distance">1.3 mi</div>
+      <div class="time">10:08</div>
+
+      <div class="controls">
+        <ion-icon *ngIf="stateService.getState() !== State.stopped" (click)="stop()" name="stop-circle-outline"></ion-icon>
+        <ion-icon *ngIf="stateService.getState() === State.stopped || stateService.getState() === State.paused" (click)="start()" name="play-circle-outline"></ion-icon>
+        <ion-icon *ngIf="stateService.getState() === State.running" (click)="pause()" name="pause-circle-outline"></ion-icon>
+      </div>
+    </div>
+
+    <div class="speed-control">
+      <input type="range" min="0" max="127" value="0" step="1" orient="vertical">
+      <div clasxs="value">0</div>
+    </div>
+  </div>
 </ion-content>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { State, StateService } from '../state.service';
 
 @Component({
   selector: 'app-manual',
@@ -7,6 +8,25 @@ import { Component } from '@angular/core';
 })
 export class ManualPage {
 
-  constructor() {}
+  public stateService: StateService;
 
+  constructor(stateService: StateService) {
+    this.stateService = stateService;
+  }
+
+  get State() {
+    return State;
+  }
+
+  stop() {
+    this.stateService.setState(State.stopped);
+  }
+
+  start() {
+    this.stateService.setState(State.running);
+  }
+
+  pause() {
+    this.stateService.setState(State.paused);
+  }
 }

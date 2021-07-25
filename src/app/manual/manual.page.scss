@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+
+  font-family: 'Courier New', Courier, monospace;
+
+  .display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+    font-size: 10vmin;
+
+    ion-icon {
+      font-size: 25vw;
+    }
+
+    .controls {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  .speed-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    font-size: 4vmin;
+
+    input[type="range"] {
+      writing-mode: bt-lr;
+      -webkit-appearance: slider-vertical;
+      height: 60vh;
+    }
+  }
+}
+
