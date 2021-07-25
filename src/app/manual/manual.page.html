@@ -15,9 +15,9 @@
 
   <div class="container">
     <div class="display">
-      <div class="speed">4.2 mph</div>
-      <div class="distance">1.3 mi</div>
-      <div class="time">10:08</div>
+      <div class="speed">?.? mph</div>
+      <div class="distance">?.? mi</div>
+      <div class="time">{{getElapsed()}}</div>
 
       <div class="controls">
         <ion-icon *ngIf="stateService.getState() !== State.stopped" (click)="stop()" name="stop-circle-outline"></ion-icon>
