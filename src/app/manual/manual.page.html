@@ -27,8 +27,8 @@
     </div>
 
     <div class="speed-control">
-      <input type="range" min="0" max="127" value="0" step="1" orient="vertical">
-      <div clasxs="value">0</div>
+      <input type="range" min="0" max="127" value="0" step="1" orient="vertical" [(ngModel)]="speedSetting">
+      <div class="value">{{speedSetting}}</div>
     </div>
   </div>
 </ion-content>

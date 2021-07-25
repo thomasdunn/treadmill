@@ -10,6 +10,8 @@ export class ManualPage {
 
   public stateService: StateService;
 
+  speedSetting = 0;
+
   constructor(stateService: StateService) {
     this.stateService = stateService;
   }
