@@ -26,8 +26,10 @@ export class ManualPage {
   }
 
   stop() {
-    this.stateService.setState(State.stopped);
-    this.stopSubject.next();
+    if (this.stateService.getState() !== State.stopped) {
+      this.stateService.setState(State.stopped);
+      this.stopSubject.next();
+    }
   }
 
   start() {

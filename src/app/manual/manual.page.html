@@ -15,20 +15,21 @@
 
   <div class="container">
     <div class="display">
+      <div class="speed-control">
+        <ion-range [(ngModel)]="speedSetting" min="0" max="127" [snaps]="true" [step]="1" [pin]="true" [ticks]="false">
+          <ion-icon name="speedometer-outline" slot="start"></ion-icon>
+        </ion-range>
+      </div>
       <div class="speed">?.? mph</div>
       <div class="distance">?.? mi</div>
       <div class="time">{{getElapsed()}}</div>
 
       <div class="controls">
-        <ion-icon *ngIf="stateService.getState() !== State.stopped" (click)="stop()" name="stop-circle-outline"></ion-icon>
-        <ion-icon *ngIf="stateService.getState() === State.stopped || stateService.getState() === State.paused" (click)="start()" name="play-circle-outline"></ion-icon>
-        <ion-icon *ngIf="stateService.getState() === State.running" (click)="pause()" name="pause-circle-outline"></ion-icon>
+        <ion-icon [ngClass]="{disabled: stateService.getState() === State.stopped }" (click)="stop()" name="stop"></ion-icon>
+        <ion-icon *ngIf="stateService.getState() === State.stopped || stateService.getState() === State.paused" (click)="start()" name="play"></ion-icon>
+        <ion-icon *ngIf="stateService.getState() === State.running" (click)="pause()" name="pause"></ion-icon>
       </div>
     </div>
 
-    <div class="speed-control">
-      <input type="range" min="0" max="127" value="0" step="1" orient="vertical" [(ngModel)]="speedSetting">
-      <div class="value">{{speedSetting}}</div>
-    </div>
   </div>
 </ion-content>
