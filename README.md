@@ -11,6 +11,7 @@ The phone display is implemented via Node.js controlling the DS3502 and talking 
 
 ## Raspberry Pi Setup
 
+```
 Setup Headless Raspberry Pi
    Write Raspberry Pi OS Lite image to SD
    Configure wpa_supplicant.conf
@@ -46,4 +47,4 @@ Auto-start the service on boot
    pm2 save
    pm2 startup
    sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u pi --hp /home/pi
-
+```
