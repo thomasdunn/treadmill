@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  serviceUrl: 'http://treadmill'
+  serviceUrl: null
 };
 
 /*

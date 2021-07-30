@@ -5,8 +5,13 @@ const server = http.createServer(app);
 import { Server } from 'socket.io';
 const io = new Server(server);
 import { ds3502 } from './ds3502.mjs';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
-app.use(express.static('../ionic/www'));
+app.use(express.static('public'));
+
+app.use((req, res) => res.sendFile('public/index.html', { root: __dirname }));
 
 server.listen(80, () => {
   console.log('listening on *:80');
