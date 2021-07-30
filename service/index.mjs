@@ -1,9 +1,10 @@
-const express = require('express');
+import express from 'express';
 const app = express();
-const http = require('http');
+import http from 'http';
 const server = http.createServer(app);
-const { Server } = require("socket.io");
+import { Server } from 'socket.io';
 const io = new Server(server);
+import { ds3502 } from './ds3502.mjs';
 
 app.use(express.static('../ionic/www'));
 
@@ -19,6 +20,8 @@ io.on('connection', (socket) => {
 
     if (! isNaN(speedValue) && speedValue >= 0 && speedValue <= 127) {
       console.log(`Speed: ${speed}`);
+      ds3502(speedValue);
     }
   });
 });
+
