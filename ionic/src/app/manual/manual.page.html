@@ -16,7 +16,7 @@
   <div class="container">
     <div class="display">
       <div class="speed-control">
-        <ion-range [(ngModel)]="speedSetting" min="0" max="127" [snaps]="true" [step]="1" [pin]="true" [ticks]="false">
+        <ion-range [(ngModel)]="speedSetting" min="0" max="127" [snaps]="true" [step]="1" [pin]="true" [ticks]="false" [debounce]="200" (ionChange)="updateSpeed()">
           <ion-icon name="speedometer-outline" slot="start"></ion-icon>
         </ion-range>
       </div>
