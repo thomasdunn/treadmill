@@ -14,11 +14,12 @@ export class TimedPage {
 
   stopSubject = new Subject();
 
-  speedSetting = 31;
+  speedSetting = 30;
   seconds = 0;
 
   constructor(stateService: StateService) {
     this.stateService = stateService;
+    this.stateService.setSpeed(this.speedSetting);
   }
 
   get State() {
@@ -30,6 +31,11 @@ export class TimedPage {
       this.stateService.setState(State.stopped);
       this.stopSubject.next();
     }
+  }
+
+  updateSpeed() {
+    console.log('updateSpeed', this.speedSetting);
+    this.stateService.setSpeed(this.speedSetting);
   }
 
   start() {
