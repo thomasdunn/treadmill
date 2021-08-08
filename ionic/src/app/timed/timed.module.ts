@@ -1,12 +1,11 @@
 import { IonicModule } from '@ionic/angular';
-import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { C25KPage } from './c25k.page';
+import { TimedPage } from './timed.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
-import { C25KPageRoutingModule } from './c25k-routing.module';
+import { TimedPageRoutingModule } from './timed-routing.module';
 
 @NgModule({
   imports: [
@@ -14,8 +13,8 @@ import { C25KPageRoutingModule } from './c25k-routing.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    C25KPageRoutingModule
+    TimedPageRoutingModule
   ],
-  declarations: [C25KPage]
+  declarations: [TimedPage]
 })
-export class C25KPageModule {}
+export class TimedPageModule {}

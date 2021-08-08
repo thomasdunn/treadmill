@@ -8,12 +8,12 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'manual',
-        loadChildren: () => import('../manual/manual.module').then(m => m.ManualPageModule)
+        path: 'timed',
+        loadChildren: () => import('../timed/timed.module').then(m => m.TimedPageModule)
       },
       {
-        path: 'c25k',
-        loadChildren: () => import('../c25k/c25k.module').then(m => m.C25KPageModule)
+        path: 'program',
+        loadChildren: () => import('../program/program.module').then(m => m.ProgramPageModule)
       },
       // {
       //   path: 'tab3',
@@ -21,14 +21,14 @@ const routes: Routes = [
       // },
       {
         path: '',
-        redirectTo: '/tabs/manual',
+        redirectTo: '/tabs/timed',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/manual',
+    redirectTo: '/tabs/timed',
     pathMatch: 'full'
   }
 ];
