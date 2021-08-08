@@ -4,11 +4,11 @@ import { Subject, timer, interval } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-manual',
-  templateUrl: 'manual.page.html',
-  styleUrls: ['manual.page.scss']
+  selector: 'app-timed',
+  templateUrl: 'timed.page.html',
+  styleUrls: ['timed.page.scss']
 })
-export class ManualPage {
+export class TimedPage {
 
   public stateService: StateService;
 

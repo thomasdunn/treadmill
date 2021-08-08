@@ -1,11 +1,12 @@
 import { IonicModule } from '@ionic/angular';
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { ManualPage } from './manual.page';
+import { ProgramPage } from './program.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
-import { ManualPageRoutingModule } from './manual-routing.module';
+import { ProgramPageRoutingModule } from './program-routing.module';
 
 @NgModule({
   imports: [
@@ -13,8 +14,8 @@ import { ManualPageRoutingModule } from './manual-routing.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    ManualPageRoutingModule
+    ProgramPageRoutingModule
   ],
-  declarations: [ManualPage]
+  declarations: [ProgramPage]
 })
-export class ManualPageModule {}
+export class ProgramPageModule {}

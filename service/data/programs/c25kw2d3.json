@@ -1,0 +1,46 @@
+[
+	{
+		"mode": "run",
+		"seconds": 90
+	},
+	{
+		"mode": "walk",
+		"seconds": 120
+	},
+	{
+		"mode": "run",
+		"seconds": 90
+	},
+	{
+		"mode": "walk",
+		"seconds": 120
+	},
+	{
+		"mode": "run",
+		"seconds": 90
+	},
+	{
+		"mode": "walk",
+		"seconds": 120
+	},
+	{
+		"mode": "run",
+		"seconds": 90
+	},
+	{
+		"mode": "walk",
+		"seconds": 120
+	},
+	{
+		"mode": "run",
+		"seconds": 90
+	},
+	{
+		"mode": "walk",
+		"seconds": 120
+	},
+	{
+		"mode": "run",
+		"seconds": 90
+	}
+]
