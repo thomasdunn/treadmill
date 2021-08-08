@@ -48,3 +48,11 @@ Auto-start the service on boot
    pm2 startup
    sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u pi --hp /home/pi
 ```
+
+## TODO
+
+* Integrate code from alert-sensor.js to service for reading treadmill speed
+* Setup safe shutdown button for RPi
+  Option 1 from:
+  https://raspberrypi.stackexchange.com/a/117019
+  https://github.com/raspberrypi/firmware/blob/master/boot/overlays/README#L1605
