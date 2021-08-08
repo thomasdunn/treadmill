@@ -6,7 +6,6 @@ I have an old treadmill that works well, except the display electronics no longe
 * Running programs such as Couch to 5K
 
 The speed of the treadmill is controlled via a potentiometer.  I have installed a Raspberry Pi in the control panel which controls the Adafruit DS3502 digital potentiometer over I2C.  I've installed a switch to toggle control via phone or via the physical potentiometer knob.
-
 The phone display is implemented via Node.js controlling the DS3502 and talking to the Ionic/Angular app over WebSockets via Socket.io.
 
 ## Raspberry Pi Setup
@@ -56,3 +55,11 @@ Auto-start the service on boot
   Option 1 from:
   https://raspberrypi.stackexchange.com/a/117019
   https://github.com/raspberrypi/firmware/blob/master/boot/overlays/README#L1605
+
+* In ds3502-test I changed to bus 2 after following these directions and using gpio 17 sda 27 scl
+  https://www.raspberrypi.org/forums/viewtopic.php?p=1644346&sid=80c5ed683f1d24756440880ac0f5e6ab#p1644346
+  digital pot not currently working.  Try rewiring Pi to unused ds3052 and see if it works.  Re-solder existing wires to this ds3502 if it is working
+  If that doesn't work, may be an issue with Pi
+  This happened when screwing around with pins on pi for detecting speed
+  Processor got VERY HOT.  I may have fried ds3502
+
